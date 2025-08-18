@@ -1,0 +1,16 @@
+.products {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.product {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+}
+.product img {
+  width: 100%;
+  height: auto;
+}

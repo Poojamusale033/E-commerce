@@ -1,0 +1,52 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a routerLink="/" class="logo">
+      <i class="fas fa-store"></i> MyShop
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+      
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+      <span class="input-group-text">.00</span>
+    </div>
+
+
+    <!-- Nav Menu -->
+    <ul class="nav-menu" [class.active]="isMenuOpen">
+      <li class="nav-item">
+        <a routerLink="/" class="nav-link" routerLinkActive="active">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/products" class="nav-link" routerLinkActive="active">
+          <i class="fas fa-box-open"></i> Products
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" class="nav-link" routerLinkActive="active">
+          <i class="fas fa-info-circle"></i> About
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/contact" class="nav-link" routerLinkActive="active">
+          <i class="fas fa-envelope"></i> Contact
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/cart" class="nav-link cart" routerLinkActive="active">
+          <i class="fas fa-shopping-cart"></i> Cart
+          <span class="cart-count">{{cartItemsCount}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
