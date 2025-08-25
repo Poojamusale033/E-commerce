@@ -1,0 +1,25 @@
+
+/* About Container */
+.about-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-top: 80px; /* Navbar height evdhach margin top */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #F57C00;
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+}

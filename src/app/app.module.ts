@@ -3,23 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-// Import केलेले components
+// Navbar + Menu components
 import { NavbarComponent } from './navbar/navbar.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProductComponent } from './product/product.component';
-import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './contact/contact.component';
+import { PhonesComponent } from './phones/phones.component';
+import { EarbudsComponent } from './earbuds/earbuds.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
+import { OffersComponent } from './offers/offers.component';
+import { SupportsComponent } from './supports/supports.component';
+import { WatchComponent } from './watch/watch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
-    AboutComponent,
-    ProductComponent,
-    CartComponent,
-    ContactComponent
+    PhonesComponent,
+    EarbudsComponent,
+    AccessoriesComponent,
+    OffersComponent,
+    WatchComponent,
+    SupportsComponent,
+    WatchComponent
   ],
   imports: [
     BrowserModule,

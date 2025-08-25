@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
-import { ProductComponent } from './product/product.component';
-import { CartComponent } from './cart/cart.component';
-import { ContactComponent } from './contact/contact.component';
+
+import { PhonesComponent } from './phones/phones.component';
+import { EarbudsComponent } from './earbuds/earbuds.component';
+import { WatchComponent } from './watch/watch.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
+import { OffersComponent } from './offers/offers.component';
+import { SupportsComponent } from './supports/supports.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'product', component: ProductComponent },   // ✅ Product path
-  { path: 'cart', component: CartComponent },         // ✅ Cart path
-  { path: 'contact', component: ContactComponent },   // ✅ Contact path
-  { path: '', redirectTo: '/home', pathMatch: 'full' }, // default route
+  { path: 'phones', component: PhonesComponent },
+  { path: 'earbuds', component: EarbudsComponent },
+  { path: 'watches', component: WatchComponent },
+  { path: 'accessories', component: AccessoriesComponent },
+  { path: 'offers', component: OffersComponent },
+  { path: 'support', component: SupportsComponent },
+
+  // Default redirect
+  { path: '', redirectTo: '/phones', pathMatch: 'full' }, 
+  { path: '**', redirectTo: '/phones' }
 ];
 
 @NgModule({

@@ -1,0 +1,92 @@
+.earbuds-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 5rem;   /* 🔥 Increased from 2rem */
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 300px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section img {
+  max-width: 300px;
+  height: auto;
+}
+
+.details-section {
+  flex: 1;
+  padding: 30px;
+}
+
+.details-section h2 {
+  color: #F57C00;
+  margin-bottom: 15px;
+}
+
+.details-section p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features li {
+  margin-bottom: 8px;
+}
+
+.buy-btn {
+  background: #F57C00;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background: #d86600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .details-section {
+    padding: 20px;
+  }
+}

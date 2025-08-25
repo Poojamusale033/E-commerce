@@ -1,46 +1,29 @@
-<nav class="navbar mb-5">
+<nav class="navbar">
   <div class="navbar-container">
-    <a routerLink="/" class="logo">
-      <i class="fas fa-store"></i> Google
-    </a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Mobile Menu Toggle -->
-    <div class="menu-toggle" (click)="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>  
-    </div>
 
     
+    <!-- Logo -->
+    <a routerLink="/" class="logo">
+      <img src="../../assets/images/Google-logo.png" alt="Google-logo">
+    </a>
 
-    <!-- Nav Menu -->
-    <ul class="nav-menu" [class.active]="isMenuOpen">
-      <li class="nav-item">
-        <a routerLink="/" class="nav-link" routerLinkActive="active">
-          <i class="fas fa-home"></i> Home
-        </a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/products" class="nav-link" routerLinkActive="active">
-          <i class="fas fa-box-open"></i> Products
-        </a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/about" class="nav-link" routerLinkActive="active">
-          <i class="fas fa-info-circle"></i> About
-        </a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/contact" class="nav-link" routerLinkActive="active">
-          <i class="fas fa-envelope"></i> Contact
-        </a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/cart" class="nav-link cart" routerLinkActive="active">
-          <i class="fas fa-shopping-cart"></i> Cart
-          <span class="cart-count">{{cartItemsCount}}</span>
-        </a>
-      </li>
+    <!-- Menu -->
+    <ul class="nav-menu">
+      <li><a class="nav-link" routerLink="/phones">Phones</a></li>
+      <li><a class="nav-link" routerLink="/earbuds">Earbuds</a></li>
+      <li><a class="nav-link" routerLink="/watches">Watches & Trackers</a></li>
+      <li><a class="nav-link" routerLink="/accessories">Accessories</a></li>
+      <li><a class="nav-link" routerLink="/offers">Offers</a></li>
+      <li><a class="nav-link" routerLink="/support">Support</a></li>
     </ul>
+
+    <!-- Right Side Icons -->
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>   <!-- Search icon -->
+      <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+      <div class="profile">P</div> <!-- Profile circle -->
+    </div>
   </div>
 </nav>
