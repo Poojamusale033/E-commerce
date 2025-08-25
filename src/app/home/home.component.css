@@ -1,11 +1,83 @@
-.home {
-  text-align: center;
-  padding: 3rem;
+.about-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
-.btn {
-  background-color: #ff6b6b;
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: #F57C00;
   color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 60px 20px;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Company Info */
+.company-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 30px;
+}
+.company-info .info-text {
+  flex: 1;
+}
+.company-info .info-image {
+  flex: 1;
+}
+.company-info img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+.mission-vision .card {
+  background: #fff3e0;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1 1 250px;
+}
+
+/* Team Section */
+.team {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+.team-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.team-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.team-card h4 {
+  margin: 10px 0 5px 0;
 }

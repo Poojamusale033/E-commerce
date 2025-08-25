@@ -7,17 +7,28 @@
   --dark: #1a1a1a;
   --shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   --transition: all 0.3s ease;
+  --navbar-height: 70px;
 }
 
 /* Navbar Glass Effect */
 .navbar {
-  background: rgba(26, 4, 4, 0.095);
+  background: rgba(26, 4, 4, 0.1);
   backdrop-filter: blur(12px);
-  position: sticky;
+  position: fixed;            /* fixed instead of sticky */
   top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
   z-index: 1000;
-  padding:   rem 0.5rem;
+  padding: 0.5rem 1rem;        /* ✅ fixed padding bug */
+  display: flex;
+  align-items: center;
   box-shadow: var(--shadow);
+}
+
+/* Prevent content hiding behind navbar */
+body {
+  padding-top: var(--navbar-height);
 }
 
 .navbar-container {
@@ -26,6 +37,7 @@
   align-items: center;
   max-width: 1300px;
   margin: auto;
+  width: 100%;
 }
 
 .logo {
@@ -79,7 +91,7 @@
 
 /* Hover Glow */
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.249);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 15px rgba(191, 84, 84, 0.2);
   transform: translateY(-3px);
 }
@@ -96,7 +108,7 @@
   top: -6px;
   right: -8px;
   background: var(--primary);
-  color: #750303;
+  color: #fff;               /* ✅ better contrast */
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -134,10 +146,10 @@
 
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: var(--navbar-height);
     left: -100%;
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - var(--navbar-height));
     backdrop-filter: blur(15px);
     flex-direction: column;
     align-items: center;

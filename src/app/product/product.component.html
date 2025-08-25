@@ -1,1 +1,12 @@
-<p>product works!</p>
+<div *ngIf="product" class="product-page">
+  <img [src]="product.image" [alt]="product.name" />
+  <h2>{{ product.name }}</h2>
+  <p class="price">₹{{ product.price }}</p>
+  <p>{{ product.description }}</p>
+  <button class="btn-buy">Add to Cart</button>
+  <button routerLink="/products" class="btn-back">Back to Products</button>
+</div>
+
+<div *ngIf="!product">
+  <p>Product not found.</p>
+</div>
