@@ -17,8 +17,8 @@ const routes: Routes = [
   { path: 'support', component: SupportsComponent },
 
   // Default redirect
-  { path: '', redirectTo: '/phones', pathMatch: 'full' }, 
-  { path: '**', redirectTo: '/phones' }
+  { path: '', redirectTo: '/phones', pathMatch: 'full' },
+  { path: '**', redirectTo: '/phones' } // wildcard route
 ];
 
 @NgModule({

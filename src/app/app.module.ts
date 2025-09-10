@@ -22,7 +22,6 @@ import { WatchComponent } from './watch/watch.component';
     OffersComponent,
     WatchComponent,
     SupportsComponent,
-    WatchComponent
   ],
   imports: [
     BrowserModule,
