@@ -1,0 +1,138 @@
+.offer-container {
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Hero Section */
+.offer-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #e8f0fe, #f1f3f4);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.offer-hero img {
+  width: 350px;
+  border-radius: 16px;
+}
+
+.hero-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #202124;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.shop-btn:hover {
+  background: #1557b0;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 20px 0 30px;
+  color: #202124;
+  text-align: center;
+}
+
+/* Offer Cards */
+.offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.offer-card {
+  position: relative;
+  width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.image-section {
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.details {
+  padding: 15px;
+}
+
+.details h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #202124;
+}
+
+.details .desc {
+  font-size: 0.95rem;
+  color: #5f6368;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #202124;
+  margin-bottom: 12px;
+}
+
+/* Offer Badge */
+.offer-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #f57c00;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}

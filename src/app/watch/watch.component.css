@@ -1,0 +1,115 @@
+.watch-container {
+  padding: 40px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.hero img {
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+}
+
+.hero-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #202124;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #1557b0;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  color: #202124;
+  text-align: center;
+}
+
+/* Watch Cards */
+.watch-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.watch-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.watch-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.image-section {
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.details {
+  padding: 15px;
+}
+
+.details h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #202124;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f6368;
+  margin-bottom: 12px;
+}
