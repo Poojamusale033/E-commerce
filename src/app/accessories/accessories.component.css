@@ -1,29 +1,95 @@
 .accessories-container {
-  padding: 40px 20px;
-  text-align: center;
+  padding: 20px;
   font-family: 'Roboto', sans-serif;
 }
 
+/* Hero Box */
+.accessory-box {
+  width: 1200px 1200px;        /* fixed width */
+  height: 400px;        /* fixed height */
+  margin: 40px auto;    /* center horizontally */
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  background: #f1f3f4;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Left Text */
+.text-section {
+  width: 45%;
+  text-align: left;
+}
+
+.text-section h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #202124;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #5f6368;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.text-section .link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.text-section .link:hover {
+  text-decoration: underline;
+}
+
+/* Hero Images */
+.hero-image-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-image-section img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* Section Titles */
 .title {
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 10px;
   color: #202124;
+  text-align: center;
 }
 
 .subtitle {
   font-size: 1.1rem;
   color: #5f6368;
   margin-bottom: 40px;
+  text-align: center;
 }
 
+/* Product Cards Grid */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  margin-top: 60px;
 }
 
+/* Product Card */
 .product-card {
   width: 280px;
   background: #fff;
@@ -32,6 +98,7 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  text-align: center;
 }
 
 .product-card:hover {
@@ -39,17 +106,19 @@
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
-.image-section {
+/* Product Image */
+.card-image {
   background: #f8f9fa;
   padding: 20px;
 }
 
-.image-section img {
+.card-image img {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
+/* Product Details */
 .details {
   padding: 20px;
 }
