@@ -1,92 +1,73 @@
-.earbuds-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.title {
+/* Page layout */
+.earbuds-page {
   text-align: center;
-  font-size: 5rem;   /* 🔥 Increased from 2rem */
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-
-
-.product-card {
-  display: flex;
-  flex-wrap: wrap;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
+  padding: 40px 11px;
+  font-family: 'Google Sans', Arial, sans-serif;
 }
 
-.image-section {
-  flex: 1;
-  min-width: 300px;
-  background: #f9f9f9;
+/* Title */
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #202124;
+}
+
+/* Product container */
+.product-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.image-section img {
-  max-width: 300px;
+/* Product card */
+.product-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 11px;
+  width: 240px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  border: 1px solid #e0e0e0;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Tags (New, Coming soon, etc.) */
+.tag {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #1a73e8;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 5px 11px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+/* Images */
+.product-card img {
+  width: 140px;
   height: auto;
-}
-
-.details-section {
-  flex: 1;
-  padding: 30px;
-}
-
-.details-section h2 {
-  color: #F57C00;
   margin-bottom: 15px;
 }
 
-.details-section p {
-  margin-bottom: 20px;
-  line-height: 1.5;
-  color: #444;
-}
-
-.features {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.features li {
-  margin-bottom: 8px;
-}
-
-.buy-btn {
-  background: #F57C00;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
+/* Product Name */
+.product-name {
   font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
+  color: #202124;
+  margin-top: 10px;
 }
 
-.buy-btn:hover {
-  background: #d86600;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .product-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .details-section {
-    padding: 20px;
-  }
+/* Remove link underline */
+a {
+  text-decoration: none;
+  color: inherit;
 }
