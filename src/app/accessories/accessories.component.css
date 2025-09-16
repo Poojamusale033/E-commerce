@@ -1,12 +1,13 @@
+/* General Accessories Container */
 .accessories-container {
   padding: 20px;
   font-family: 'Roboto', sans-serif;
 }
 
-/* Hero Box */
+/* ================= Hero Box ================= */
 .accessory-box {
-  width: 1200px 1200px;        /* fixed width */
-  height: 400px;        /* fixed height */
+  width: 1200px;        /* fixed width */
+  height: 300px;        /* fixed height */
   margin: 40px auto;    /* center horizontally */
   padding: 50px;
   display: flex;
@@ -58,13 +59,13 @@
 }
 
 .hero-image-section img {
-  width: 200px;
+  width: 700px;
   height: auto;
   border-radius: 12px;
   object-fit: contain;
 }
 
-/* Section Titles */
+/* ================= Section Titles ================= */
 .title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -80,75 +81,153 @@
   text-align: center;
 }
 
-/* Product Cards Grid */
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 60px;
+.product-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
 }
 
-/* Product Card */
 .product-card {
-  width: 280px;
   background: #fff;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 380px;
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-}
-
-/* Product Image */
-.card-image {
-  background: #f8f9fa;
-  padding: 20px;
+  transform: translateY(-5px);
 }
 
 .card-image img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: contain;
 }
 
-/* Product Details */
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.color-options span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-options span.active {
+  border: 2px solid #4285F4;
+}
+
 .details {
-  padding: 20px;
+  margin-top: 8px;
 }
 
 .product-title {
-  font-size: 1.2rem;
+  font-size: 15px;
   font-weight: 500;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: #202124;
 }
 
 .product-price {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #5f6368;
-  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
 }
 
-.buy-btn {
-  background: #1a73e8;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 500;
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #f57c00;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+
+.product-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  position: relative;
+  height: 380px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.color-options span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.buy-btn:hover {
-  background: #1557b0;
+.color-options span.active {
+  border: 2px solid #4285F4;
+}
+
+.details {
+  margin-top: 8px;
+}
+
+.product-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #202124;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #f57c00;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
 }

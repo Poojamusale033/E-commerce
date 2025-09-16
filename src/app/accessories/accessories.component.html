@@ -16,48 +16,29 @@
 
     <!-- Right Image Section -->
     <div class="hero-image-section">
-      <img src="assets/images/accessory-1.png" alt="Accessory 1">
-      <img src="assets/images/accessory-2.png" alt="Accessory 2">
-      <img src="assets/images/accessory-3.png" alt="Accessory 3">
+      <img src="../../assets/images/accessories 111.png" alt="Accessory 1">
     </div>
   </div>
 
-  <!-- Product Cards -->
-  <div class="cards-container">
-    <!-- Case -->
-    <div class="product-card">
-      <div class="card-image">
-        <img src="../../assets/images/pixel 9 pro case.png" alt="Pixel Case">
-      </div>
-      <div class="details">
-        <h2 class="product-title">Pixel 9 Pro Case</h2>
-        <p class="product-price">₹3,999</p>
-        <button class="buy-btn">Buy</button>
-      </div>
+<div class="product-carousel">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="card-image">
+      <img [src]="product.selectedImage" [alt]="product.title">
     </div>
 
-    <!-- Earbuds -->
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/images/pixel-buds.png" alt="Pixel Buds Pro">
-      </div>
-      <div class="details">
-        <h2 class="product-title">Pixel Buds Pro</h2>
-        <p class="product-price">₹19,990</p>
-        <button class="buy-btn">Buy</button>
-      </div>
+    <!-- Color options -->
+    <div class="color-options" *ngIf="product.colors?.length">
+      <span *ngFor="let color of product.colors"
+            [style.background]="color.hex"
+            (click)="selectColor(product, color)"
+            [class.active]="product.selectedColor === color.hex"></span>
     </div>
 
-    <!-- Charger -->
-    <div class="product-card">
-      <div class="card-image">
-        <img src="assets/images/pixel-charger.png" alt="Pixel Charger">
-      </div>
-      <div class="details">
-        <h2 class="product-title">30W USB-C Charger</h2>
-        <p class="product-price">₹2,299</p>
-        <button class="buy-btn">Buy</button>
-      </div>
+    <!-- Details -->
+    <div class="details">
+      <h3 class="product-title">{{ product.title }}</h3>
+      <p class="product-price" *ngIf="product.price">₹{{ product.price }}</p>
+      <span class="badge" *ngIf="product.badge">{{ product.badge }}</span>
     </div>
   </div>
 </div>
