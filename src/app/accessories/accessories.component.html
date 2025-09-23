@@ -1,44 +1,524 @@
-<div class="accessories-container">
-
-  <!-- Hero Accessory Box -->
-  <div class="accessory-box">
-    <!-- Left Text Section -->
-    <div class="text-section">
-      <h1>Snap on. Power up. Do more.</h1>
-      <p>
-        Pixel 10 phones have Pixelsnap magnetic technology that lets you effortlessly 
-        snap on wireless chargers for more efficient charging.<sup>1,2</sup> 
-        You’ll also have a world of magnetic accessories to choose from – 
-        stands, grips, wallets, and more.<sup>2,3</sup>
-      </p>
-      <a href="#" class="link">Browse Pixelsnap accessories →</a>
-    </div>
-
-    <!-- Right Image Section -->
-    <div class="hero-image-section">
-      <img src="../../assets/images/accessories 111.png" alt="Accessory 1">
-    </div>
+<!-- Hero Box -->
+<div class="accessory-box">
+  <div class="text-section">
+    <h1>Snap on. Power up. Do more.</h1>
+    <p>
+      Pixel phones have Pixelsnap magnetic technology that lets you effortlessly 
+      snap on wireless chargers and accessories. Discover the best add-ons to 
+      make your Pixel even better.
+    </p>
+    <a href="#" class="link">Shop all accessories →</a>
   </div>
 
-<div class="product-carousel">
-  <div class="product-card" *ngFor="let product of products">
-    <div class="card-image">
-      <img [src]="product.selectedImage" [alt]="product.title">
-    </div>
-
-    <!-- Color options -->
-    <div class="color-options" *ngIf="product.colors?.length">
-      <span *ngFor="let color of product.colors"
-            [style.background]="color.hex"
-            (click)="selectColor(product, color)"
-            [class.active]="product.selectedColor === color.hex"></span>
-    </div>
-
-    <!-- Details -->
-    <div class="details">
-      <h3 class="product-title">{{ product.title }}</h3>
-      <p class="product-price" *ngIf="product.price">₹{{ product.price }}</p>
-      <span class="badge" *ngIf="product.badge">{{ product.badge }}</span>
-    </div>
+  <div class="hero-image-section">
+    <img src="../../assets/images/accessories 111.png" alt="Pixel Accessories">
   </div>
+</div>
+
+<!-- Main Page -->
+<div class="accessories-page">
+
+  <!-- Sidebar Filters -->
+  <aside class="filters">
+    <h3>Filters</h3>
+
+    <div class="filter-group">
+      <h4>Compatibility</h4>
+      <p class="filter-label">Phone</p>
+      <label><input type="checkbox"> Pixel 10</label>
+      <label><input type="checkbox"> Pixel 10 Pro Fold</label>
+      <label><input type="checkbox"> Pixel 10 Pro XL</label>
+      <label><input type="checkbox"> Pixel 10 Pro</label>
+      <label><input type="checkbox"> Pixel 9a</label>
+      <label><input type="checkbox"> Pixel 9 Pro Fold</label>
+      <label><input type="checkbox"> Pixel 9 Pro XL</label>
+      <label><input type="checkbox"> Pixel 9 Pro</label>
+      <label><input type="checkbox"> Pixel 9</label>
+      <label><input type="checkbox"> Pixel 8a</label>
+      <label><input type="checkbox"> Pixel 8 Pro</label>
+      <label><input type="checkbox"> Pixel 8</label>
+      <label><input type="checkbox"> Pixel 7a</label>
+    </div>
+
+    <div class="filter-group">
+      <p class="filter-label">Watch</p>
+      <label><input type="checkbox"> Google Pixel Watch 4</label>
+      <label><input type="checkbox"> Google Pixel Watch 3</label>
+      <label><input type="checkbox"> Google Pixel Watch 2</label>
+    </div>
+
+    <hr>
+
+    <div class="filter-group collapsible">
+      <h4>Product Type <span class="toggle">+</span></h4>
+    </div>
+
+    <hr>
+
+    <div class="filter-group collapsible">
+      <h4>Colours <span class="toggle">+</span></h4>
+    </div>
+
+    <hr>
+
+    <div class="reset-filters">
+      <a href="#"><span class="reset-icon">↺</span> Reset filters</a>
+    </div>
+  </aside>
+
+  <!-- Products Section -->
+  <main class="products-section">
+    <div class="products-header">
+      <h2>Accessories</h2>
+      <div class="sort-view">
+        <label for="sort">Sort By:</label>
+        <select id="sort">
+          <option>Featured</option>
+          <option>Newest</option>
+        </select>
+        <div class="view-icons">
+          <span>🔲</span>
+          <span>📃</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="products">
+
+      <!-- Product Card 1 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel case 10, 10 Pro and 10 Pro XL</h3>
+        <p class="price">₹4,900</p>
+    </div>
+
+   <!-- Product Card 2 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/10pro fold case 1.png" alt="Case 1">
+            <img src="../../assets/images/10pro fold case 2.png" alt="Case 2">
+            <img src="../../assets/images/10pro fold case 3.png" alt="Case 3">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixelsnap Case for Pixel 10 Pro Fold</h3>
+        <p class="price">₹6,939</p>
+      </div>
+
+            <!-- Product Card 3 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 9a case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 9a case 2.png" alt="Case 2">
+            <img src="../../assets/images/pixel 9a case 3.png" alt="Case 3">
+            <img src="../../assets/images/pixel 9a case 4.png" alt="Case 4">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel 9a case </h3>
+        <p class="price">₹1,999 </p>
+      </div>
+
+      <!-- Product Card 4 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/Pixel Buds Pro 2 1.png" alt="Case 1">
+            <img src="../../assets/images/Pixel Buds Pro 2 3.png" alt="Case 2">
+            <img src="../../assets/images/Pixel Buds Pro 2  2.png" alt="Case 3">
+            <img src="../../assets/images/Pixel Buds Pro 2 4.png" alt="Case 4">
+           
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Buds Pro 2</h3>
+        <p class="price">₹22,900</p>
+      </div>
+
+            <!-- Product Card 5 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Buds 2a</h3>
+        <p class="price">₹12,999</p>
+      </div>
+
+      <!-- Product Card 6 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Watch 4</h3>
+        <p class="price">From ₹39,900</p>
+      </div>
+
+            <!-- Product Card 7 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Watch 3</h3>
+        <p class="price">From ₹28,900</p>
+      </div>
+
+            <!-- Product Card 8 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Watch Performance Loop Band</h3>
+        <p class="price">₹4,999</p>
+      </div>
+
+            <!-- Product Card 9 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Watch Active Sports Band</h3>
+        <p class="price">₹3,999</p>
+      </div>
+
+            <!-- Product Card 10 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel Watch Active Band</h3>
+        <p class="price">₹3,999</p>
+      </div>
+
+            <!-- Product Card 11 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel 9, 9 Pro, 9 Pro XL cases</h3>
+        <p class="price">₹3,999</p>
+      </div>
+
+            <!-- Product Card 12 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel 8a Case</h3>
+        <p class="price">₹2,999</p>
+      </div>
+
+            <!-- Product Card 13 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel 8 Pro case </h3>
+        <p class="price">₹3,499</p>
+      </div>
+
+            <!-- Product Card 14 with Carousel -->
+      <div class="product-card">
+        <div class="carousel">
+          <div class="carousel-track">
+            <img src="../../assets/images/pixel 10, 10pro and pro XL  case 1.png" alt="Case 1">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 3.png" alt="Case 2">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 4.png" alt="Case 3">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 5.png" alt="Case 4">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 6.png" alt="Case 5">
+            <img src="../../assets/images/pixel 10 , 10pro and pro XL 7.png" alt="Case 6">
+            <img src="../../assets/images/pixel 10, 10 pro and pro XL case 2.png" alt="Case 7">
+          </div>
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+          <div class="carousel-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <h3>Pixel 8 case </h3>
+        <p class="price">₹3,499</p>
+      </div>
+
+       <!-- Card 1 -->
+      <div class="product-card">
+        <img src="../../assets/images/Pixelsnap Charger with Stand.png" alt="Pixel 10 Case">
+        <h3>Pixelsnap Charger with Stand</h3>
+        <p class="price">₹6,939</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <img src="../../assets/images/pixelsnap ring stand.png" alt="Pixel 10 Pro Case">
+        <h3>Pixelsnap Ring Stand</h3>
+        <p class="price">₹2,979</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <img src="../../assets/images/9pro fold case pixel.png" alt="Pixel 10 Pro XL Case">
+        <h3>Pixel 9 Pro Fold Case</h3>
+        <p class="price">₹5,499</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="product-card">
+        <img src="../../assets/images/pixel watch-quick charger dock.png" alt="Pixel Charger 30W">
+        <h3>Google Pixel Watch Quick Charge Dock</h3>
+        <p class="price">₹2,999</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="product-card">
+        <img src="../../assets/images/Google Pixel Watch (2 & 3) USB-C® Fast Charging Cable.png" alt="Pixel Buds Pro">
+        <h3>Google Pixel Watch (2 & 3) USB-C® Fast Charging Cable</h3>
+        <p class="price">₹2,999</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="product-card">
+        <img src="../../assets/images/pixelsnap charger.png" alt="Pixel Watch 3">
+        <h3>Pixelsnap Charger</h3>
+        <p class="price">₹4,500</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="product-card">
+        <img src="../../assets/images/google 45W USB-C power adapter.png" alt="Pixel Accessories">
+        <h3>Google 45W USB-C Power Adapter</h3>
+        <p class="price">₹3,499</p>
+      </div>
+
+
+    </div>
+  </main>
 </div>

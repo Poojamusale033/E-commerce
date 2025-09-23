@@ -3,9 +3,8 @@
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
-  margin: 40px 0 30px 0;
+  margin: 40px  30px 0;
   color: #333;
-  padding: 0px;
 }
 
 /* Header Section */
@@ -16,32 +15,29 @@
 }
 
 .pixel-header h2 {
-  font-size: 1.8rem;
-  font-weight: 400;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
   color: #202124;
 }
 
 .pixel-header p {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
   color: #000;
 }
 
 /* Pixel Cards Container */
 .pixel-container {
-  overflow-x: auto; /* enable horizontal scroll */
-  white-space: nowrap;
-  padding: 90px;
+  overflow-x: auto;
+  padding: 70px;
 }
 
 .pixel-list {
   display: flex;
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .pixel-card {
-  display: inline-block; /* single line */
   width: 150px;
   text-align: center;
   position: relative;
@@ -109,18 +105,22 @@ video {
   object-fit: cover;
   border-radius: 20px;
 }
+
+/* Promo Slider */
 .promo-slider-wrapper {
   width: 100%;
-  overflow: hidden;
-  padding: 40px 0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .promo-slider {
   display: flex;
   gap: 30px;
-  overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  align-items: stretch;
+  overflow-x: auto;
 }
 
 .promo-slider::-webkit-scrollbar {
@@ -128,35 +128,37 @@ video {
 }
 
 .promo-slide {
-  flex: 0 0 80%;          /* width of the slide */
-  scroll-snap-align: start;
+  flex: 0 0 70%;
+  max-width: 1000px;
+  scroll-snap-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #e8edf4;
-  padding: 60px 40px;     /* increased vertical padding for more height */
+  padding: 50px 40px;
   border-radius: 20px;
-  gap: 20px;
-  min-width: 500px;       /* width of the slide */
-  min-height: 400px;      /* ensures a taller box */
-  margin: 0 auto;         /* center the slide */
+  gap: 30px;
+  min-height: 420px;
+  margin: 0 auto;
 }
 
-
+/* Promo Text */
 .promo-text {
   flex: 1;
   max-width: 480px;
+  text-align: left;
 }
 
 .promo-text h1 {
-  font-size: 42px;
+  font-size: 40px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .promo-text p {
   font-size: 18px;
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 .price {
@@ -170,50 +172,35 @@ video {
   text-decoration: none;
 }
 
-.value-offer {
-  background-color: white;
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 16px;
-  border-radius: 10px;
-  margin-top: 16px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.buttons {
-  margin-top: 24px;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.buy-btn {
-  background-color: #1a73e8;
-  color: white;
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.learn-link {
-  font-size: 16px;
-  color: #1a73e8;
-  text-decoration: none;
-  font-weight: 500;
-}
-
+/* Promo Image / Video */
 .promo-image {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.promo-image img {
-  max-width: 100%;
+.promo-image img,
+.promo-image video {
+  max-width: 95%;   /* increased width */
   height: auto;
   border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .promo-text {
+    text-align: center;
+  }
+
+  .promo-image img,
+  .promo-image video {
+    max-width: 100%;
+  }
 }
