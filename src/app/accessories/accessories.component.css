@@ -221,26 +221,18 @@ body {
   color: #1a73e8;
 }
 
-/* Color Palette */
-.color-palette {
-  display: flex;
-  gap: 12px;
-  margin-top: 15px;
-}
 
-.color-option {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
-.color-option:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 6px rgba(0,0,0,0.3);
-}
 
-.color-option.selected {
-  outline: 3px solid #1a73e8;
-}
+
+
+
+
+
+
+
+
+
+
+
+

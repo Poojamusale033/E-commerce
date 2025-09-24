@@ -8,9 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PhonesComponent } from './phones/phones.component';
 import { EarbudsComponent } from './earbuds/earbuds.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
-import { OffersComponent } from './offers/offers.component';
+import { OfferComponent } from './offers/offers.component';
 import { SupportsComponent } from './supports/supports.component';
 import { WatchComponent } from './watch/watch.component';
+import { Router } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,13 @@ import { WatchComponent } from './watch/watch.component';
     PhonesComponent,
     EarbudsComponent,
     AccessoriesComponent,
-    OffersComponent,
+    OfferComponent,
     WatchComponent,
     SupportsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

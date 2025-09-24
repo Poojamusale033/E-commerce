@@ -5,7 +5,7 @@ import { PhonesComponent } from './phones/phones.component';
 import { EarbudsComponent } from './earbuds/earbuds.component';
 import { WatchComponent } from './watch/watch.component';
 import { AccessoriesComponent } from './accessories/accessories.component';
-import { OffersComponent } from './offers/offers.component';
+import { OfferComponent } from './offers/offers.component';
 import { SupportsComponent } from './supports/supports.component';
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'earbuds', component: EarbudsComponent },
   { path: 'watches', component: WatchComponent },
   { path: 'accessories', component: AccessoriesComponent },
-  { path: 'offers', component: OffersComponent },
+  { path: 'offers', component: OfferComponent },
   { path: 'support', component: SupportsComponent },
 
   // Default redirect
