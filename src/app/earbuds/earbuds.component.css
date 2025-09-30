@@ -1,4 +1,6 @@
-/* Page layout */
+/* =======================
+   Page Layout
+======================= */
 .earbuds-page {
   display: flex;
   flex-direction: column;
@@ -9,7 +11,9 @@
   font-family: 'Google Sans', Arial, sans-serif;
 }
 
-/* Title */
+/* =======================
+   Page Title
+======================= */
 .title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -17,68 +21,607 @@
   color: #202124;
 }
 
-/* Product container */
+/* =======================
+   Product Container
+======================= */
 .product-container {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
 }
 
-/* Product card */
+/* =======================
+   Product Card
+======================= */
 .product-card {
+  position: relative;
   background: #f8f9fa;
   border-radius: 16px;
   padding: 20px;
   width: 260px;
+  min-height: 320px; /* keeps all cards same height */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-card:hover {
   transform: translateY(-5px);
 }
 
-.product-card img {
-  width: 160px;
+/* =======================
+   Image Box (Single)
+======================= */
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 15px;
 }
 
-.product-card h2 {
+.image-box img {
+  width: 680px;
+  max-width: 100%;
+  border-radius: 12px; /* optional styling */
+}
+
+/* =======================
+   Compare Card Images (Stacked)
+======================= */
+.image-box.compare {
+  display: flex;          /* side by side */
+  gap: -50px;              /* space between images */
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.image-box.compare img {
+  width: 220px;
+  border-radius: 12px;
+}
+
+/* =======================
+   Product Name
+======================= */
+.product-name {
+  text-align: center;
+  margin: 10px 0 30px 0; /* spacing below each card */
   font-size: 1.25rem;
+
   margin: 10px 0;
   color: #5f6368;
+
+  color: #202124;
 }
 
-.product-card p {
-  font-size: 0.95rem;
-  color: #5f6368;
-  margin-bottom: 15px;
-}
-
-/* "New" Tag */
+/* =======================
+   Tag Styles
+======================= */
 .tag {
-  display: inline-block;
-  background: #1a73e8;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background:  #c2d5ed;
   color: #fff;
   font-size: 0.8rem;
   padding: 4px 10px;
   border-radius: 12px;
-  margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
-/* Button */
+.tag.coming {
+  background: #c2d5ed;/* gray for coming soon */
+}
+
+/* =======================
+   Responsive Adjustments
+======================= */
+@media (max-width: 600px) {
+  .product-card {
+    width: 90%;
+  }
+
+  .image-box img,
+  .image-box.compare img {
+    width: 100px;
+  }
+}
+
+/* Wrapper for card + text */
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Page Layout */
+.earbuds-landing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  font-family: 'Google Sans', Arial, sans-serif;
+}
+
+.earbuds-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;  
+}
+
+/* Section Styles */
+.earbuds-section {
+  flex: 1;
+  min-width: 300px;
+  padding: 60px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.earbuds-section.pro {
+  background: #f1f6fb; /* light blue */
+}
+
+.earbuds-section.a2 {
+  background: #f6f4ff; /* light violet */
+}
+
+/* Text Content */
+.earbuds-text {
+  max-width: 400px;
+}
+
+.earbuds-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #202124;
+}
+
+.earbuds-text p {
+  font-size: 1.1rem;
+  color: #5f6368;
+  margin-bottom: 20px;
+}
+
 .btn {
   display: inline-block;
-  padding: 10px 18px;
-  background: #1a73e8;
-  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1.5px solid #202124;
+  border-radius: 25px;
   text-decoration: none;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: background 0.2s ease;
+  color: #202124;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background: #1558b0;
+  background: #202124;
+  color: #fff;
+}
+
+/* Image Styling */
+.earbuds-image img {
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .earbuds-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .earbuds-text {
+    margin-bottom: 20px;
+  }
+}
+
+/* Section Layout */
+.difference-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  font-family: 'Google Sans', Arial, sans-serif;
+}
+
+.difference-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #15161b;
+}
+
+/* Features Container */
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Feature Card */
+.feature-card {
+  flex: 1 1 220px;
+  max-width: 250px;
+  text-align: center;
+}
+
+.feature-card .icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #202124;
+}
+
+/* Special Styling for AI Chip */
+.icon.ai-chip {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  background: #f1f3f4;
+  border-radius: 6px;
+  padding: 6px 10px;
+  color: #202124;
+}
+
+.feature-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #202124;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #5f6368;
+  line-height: 1.4;
+}
+
+/* Container */
+.pixel-buds-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Google Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+/* Page Title */
+.pixel-buds-container .title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #202124;
+}
+
+/* Products Grid (without card boxes) */
+.products-grid {
+  display: flex;
+  gap: 250px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual Product Item */
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Product Name */
+.product-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #202124;
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  gap: 15px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0d62d9;
+  box-shadow: 0 2px 5px rgba(26, 115, 232, 0.3);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #1a73e8;
+  border: 1px solid #1a73e8;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f3f4;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .products-grid {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .btn {
+    width: 00%;
+  }
+}
+
+
+/* Universal product image styling */
+img[alt*="Pixel Buds"] {
+  max-width: 220px;   /* same width for all earbuds */
+  height: auto;       /* keep aspect ratio */
+  object-fit: contain; /* prevents stretching */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Compare card images side by side */
+.image-box.compare img {
+  max-width: 180px;   /* slightly smaller so both fit */
+}
+
+/* Section landing images */
+.earbuds-image img {
+  max-width: 300px;   /* bigger for landing highlight */
+  height: auto;
+}
+
+
+/* Universal product image styling */
+img[alt*="Pixel Buds"] {
+  max-width: 220px;   /* same width for all earbuds */
+  height: auto;       /* keep aspect ratio */
+  object-fit: contain; /* prevents stretching */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Compare card images side by side */
+.image-box.compare img {
+  max-width: 180px;   /* slightly smaller so both fit */
+}
+
+/* Section landing images */
+.earbuds-image img {
+  max-width: 100px;   /* bigger for landing highlight */
+  height: auto;
+}
+
+
+.two-box-container {
+  display: flex;              /* side by side layout */
+  justify-content: center;    /* center horizontally */
+  align-items: flex-start;    /* align at the top */
+  gap: 30px;                  /* space between boxes */
+  flex-wrap: wrap;            /* stack on small screens */
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.box {
+  flex: 1;                    /* equal width */
+  min-width: 280px;           /* prevents shrinking too small */
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+  color: #202124;
+}
+
+.box p {
+  font-size: 1rem;
+  color: #5f6368;
+}
+
+@media (max-width: 768px) {
+  .two-box-container {
+    flex-direction: column;   /* stack on mobile */
+    gap: 20px;
+  }
+}
+
+
+
+
+
+.comparison-section {
+  font-family: 'Google Sans', Arial, sans-serif;
+  padding: 30px 20px;
+}
+
+.comparison-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #202124;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between text and line */
+}
+
+.comparison-title::after {
+  content: "";
+  flex: 1;               /* make line expand */
+  height: 3px;           /* thicker line */
+  background: #040509;   /* dark bold color */
+  border-radius: 2px;    /* optional rounded edges */
+}
+
+.comparison-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.comparison-column {
+  flex: 1;
+  min-width: 280px;
+  font-size: 1rem;
+  color: #202124;
+}
+
+.comparison-column p {
+  margin: 15px 0;
+}
+
+.comparison-icon {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #08090b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .comparison-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+   
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.header {
+    background-color: #1d1d1f;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.features {
+    padding: 25px 20px;
+}
+
+.feature-item {
+    margin-bottom: 25px;
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.time-highlight {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 5px;
+}
+
+.time-description {
+    font-size: 16px;
+    color: #86868b;
+    line-height: 1.4;
+}
+
+.wireless-charging {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 8px 0;
+}
+
+.wireless-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.wireless-text {
+    color: #0071e3;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sup {
+    font-size: 14px;
+    vertical-align: super;
+    color: #86868b;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e5e5e7;
+    margin: 20px 0;
 }
