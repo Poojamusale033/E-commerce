@@ -1,29 +1,151 @@
-<nav class="navbar">
-  <div class="navbar-container">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-    
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top custom-navbar">
+  <div class="container">
     <!-- Logo -->
-    <a routerLink="/" class="logo">
-      <img src="../../assets/images/Google-logo.png" alt="Google-logo">
+    <a class="navbar-brand" routerLink="/">
+      <img src="../../assets/images/Google-logo.png" alt="Google" height="30">
     </a>
 
-    <!-- Menu -->
-    <ul class="nav-menu">
-      <li><a class="nav-link" routerLink="/phones">Phones</a></li>
-      <li><a class="nav-link" routerLink="/earbuds">Earbuds</a></li>
-      <li><a class="nav-link" routerLink="/watches">Watches & Trackers</a></li>
-      <li><a class="nav-link" routerLink="/accessories">Accessories</a></li>
-      <li><a class="nav-link" routerLink="/offers">Offers</a></li>
-      <li><a class="nav-link" routerLink="/support">Support</a></li>
-    </ul>
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarContent" aria-controls="navbarContent" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Right Side Icons -->
-    <div class="nav-icons">
-      <i class="fas fa-search"></i>   <!-- Search icon -->
-      <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
-      <div class="profile">P</div> <!-- Profile circle -->
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/phones" routerLinkActive="active">Phones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/earbuds" routerLinkActive="active">Earbuds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/watches" routerLinkActive="active">Watches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/accessories" routerLinkActive="active">Accessories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/offers" routerLinkActive="active">Offers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/support" routerLinkActive="active">Support</a>
+        </li>
+      </ul>
+
+      <!-- Right Side Icons with Proper Spacing -->
+      <div class="navbar-icons-container d-flex align-items-center">
+        <!-- Search -->
+        <div class="nav-item icon-wrapper">
+          <a class="nav-link icon-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-search icon-custom"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end p-3 search-dropdown">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+              <button class="btn btn-outline-primary search-btn" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <div class="nav-item icon-wrapper">
+          <a class="nav-link icon-link position-relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-shopping-cart icon-custom"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+              3
+              <span class="visually-hidden">items in cart</span>
+            </span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end p-3 cart-dropdown">
+            <h6 class="dropdown-header">Your Cart (3)</h6>
+            <div class="dropdown-divider"></div>
+            
+            <!-- Cart Items -->
+            <div class="cart-items">
+              <div class="d-flex align-items-center mb-3">
+                <img src="../../assets/images/pixel-case-thumb.jpg" alt="Pixel Case" class="cart-item-img me-2">
+                <div class="flex-grow-1">
+                  <div class="fw-semibold small">Pixel Case 10 Pro</div>
+                  <div class="text-muted small">₹4,900</div>
+                </div>
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              
+              <div class="d-flex align-items-center mb-3">
+                <img src="../../assets/images/buds-pro-thumb.jpg" alt="Pixel Buds" class="cart-item-img me-2">
+                <div class="flex-grow-1">
+                  <div class="fw-semibold small">Pixel Buds Pro 2</div>
+                  <div class="text-muted small">₹22,900</div>
+                </div>
+                <button class="btn btn-sm btn-outline-danger">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="dropdown-divider"></div>
+            <div class="d-flex justify-content-between mb-2">
+              <span class="fw-semibold">Total:</span>
+              <span class="fw-bold text-primary">₹27,800</span>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary btn-sm">
+                <i class="fas fa-shopping-cart me-1"></i>View Cart
+              </button>
+              <button class="btn btn-outline-primary btn-sm">
+                <i class="fas fa-credit-card me-1"></i>Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="nav-item icon-wrapper">
+          <a class="nav-link icon-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="profile-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end profile-dropdown">
+            <li><h6 class="dropdown-header">Welcome, User!</h6></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-user me-2"></i>My Account
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-shopping-bag me-2"></i>Orders
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-heart me-2"></i>Wishlist
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-cog me-2"></i>Settings
+              </a>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item" href="#">
+                <i class="fas fa-sign-out-alt me-2"></i>Sign Out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
