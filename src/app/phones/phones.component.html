@@ -45,13 +45,12 @@
 
 <!-- Pixel Header -->
 <div class="pixel-header">
-  <h2>Google Pixel 10 Series</h2>
-  <p>Ask more of your phone.</p>
+  <h1>Google Pixel 10 Series</h1>
 </div>
 
 <!-- Video Section -->
 <div class="earbuds-container">
-  <h1 class="title">Experience the New Google Pixel Phones</h1>
+  <h2 class="title">Ask more of your phone </h2>
 
   <div class="phone-video-container">
     <video autoplay muted loop playsinline>
@@ -105,6 +104,25 @@
   </div>
 </div>
 
+<!-- Color Image Slider -->
+<div class="color-slider-wrapper">
+  <div class="color-slider">
+    <!-- Slide 1 -->
+    <div class="color-slide">
+      <img src="../../assets/images/color image nd. phones 1.jpg" alt="Pixel">
+    </div>
+    <!-- Slide 2 -->
+    <div class="color-slide">
+      <img src="../../assets/images/color image nd. phones 2.jpg" alt="Pixel">
+    </div>
+    <!-- Slide 3 -->
+    <div class="color-slide">
+      <img src="../../assets/images/color image nd. phones 3.jpg" alt="Pixel">
+    </div>
+  </div>
+</div>
+
+
 <script>
 const slider = document.querySelector('.promo-slider');
 const slides = document.querySelectorAll('.promo-slide');
@@ -120,3 +138,21 @@ setInterval(() => {
   });
 }, 2000);
 </script>
+
+<!-- hero-layout.component.html -->
+<section class="hero-section">
+  <!-- Right: Hero Title -->
+   <h1 class="hero-title">
+    Material 3 Expressive brings a whole new look to Pixel with more dynamic ways 
+    to make it uniquely yours.
+  </h1>
+  <!-- Left: Swatches -->
+  <div class="swatches" role="tablist" aria-label="Theme color choices">
+    <button class="swatch" aria-checked="false" title="Purple" style="--swatch:#d1c8ff"></button>
+    <button class="swatch" aria-checked="false" title="Green" style="--swatch:#cfe6b8"></button>
+    <button class="swatch" aria-checked="true" title="Blue" style="--swatch:#4f84f6"></button>
+  </div>
+</section>
+
+
+
