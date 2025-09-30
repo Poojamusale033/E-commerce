@@ -63,27 +63,29 @@
 }
 
 .image-box img {
-  width: 680px;
+  width: 300px;
   max-width: 100%;
   border-radius: 12px; /* optional styling */
+  padding: 40px;
 }
 
 /* =======================
    Compare Card Images (Stacked)
 ======================= */
 .image-box.compare {
-  display: flex;          /* side by side */
-  gap: -50px;              /* space between images */
+  display: flex;
+  gap: 10px; /* positive gap for proper alignment */
   justify-content: center;
   align-items: center;
   padding: 40px;
+  width: 50px;
 }
 
 .image-box.compare img {
-  width: 220px;
+  width: 300px;
   border-radius: 12px;
+  padding: 5px;
 }
-
 /* =======================
    Product Name
 ======================= */
