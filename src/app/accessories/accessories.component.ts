@@ -118,4 +118,4 @@ export class AccessoriesComponent implements AfterViewInit {
       }
     }
   }
-}
+}``
