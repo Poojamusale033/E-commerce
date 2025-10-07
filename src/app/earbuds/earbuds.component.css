@@ -654,7 +654,7 @@ img[alt*="Pixel Buds"] {
 
 .compare-btn button {
   background-color: #1a73e8;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 12px 24px;
   border-radius: 25px;
