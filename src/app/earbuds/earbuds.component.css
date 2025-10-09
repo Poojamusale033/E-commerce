@@ -522,75 +522,84 @@ img[alt*="Pixel Buds"] {
 /* ========================
    Comparison Section Layout
 ======================== */
-.comparison-section {
-  background: #fff;
-  padding: 40px 20px;
-  font-family: 'Google Sans', Arial, sans-serif;
-}
-
-.comparison-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+.comparison-container {
+  font-family: 'Inter', sans-serif;
+  color: #202124;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 1rem;
 }
 
-.comparison-column {
+.comparison-section {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 0;
+}
+
+.comparison-section h3 {
+  font-size: 1rem;
+  color: #5f6368;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.comparison-row {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-/* ========================
-   Comparison Items
-======================== */
-.comparison-item {
+.comparison-col {
+  flex: 1;
+  min-width: 280px;
   text-align: left;
 }
 
-.comparison-item h3 {
+.comparison-col h4 {
   font-size: 1.2rem;
+  margin: 0.5rem 0;
   font-weight: 600;
-  margin: 10px 0 5px;
 }
 
-.comparison-item p {
-  font-size: 0.95rem;
-  color: #444;
-  margin: 1px 0;
-}
-
-.sub-heading {
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 10px;
-  color: #333;
+.comparison-col p {
+  margin: 0.2rem 0;
+  color: #5f6368;
 }
 
 .highlight {
   font-weight: 600;
-  margin-top: 5px;
+  color: #000;
+  margin-top: 0.5rem;
 }
 
-/* ========================
-   Icons & Chips
-======================== */
+/* Icons */
 .icon {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 10px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.5rem;
 }
 
+.icon.battery {
+  background: url('https://fonts.gstatic.com/s/i/materialiconsoutlined/battery_charging_full/v9/24px.svg') no-repeat center;
+  background-size: contain;
+}
+
+.icon.twist {
+  background: url('https://fonts.gstatic.com/s/i/materialiconsoutlined/refresh/v13/24px.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Chip style */
 .chip {
   display: inline-block;
-  background: #000;
-  color: #ffffff;
-  font-size: 0.9rem;
+  background-color: #202124;
+  color: #fff;
+  border-radius: 4px;
   font-weight: 600;
   padding: 4px 10px;
-  border-radius: 6px;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ========================
@@ -709,7 +718,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 40px;
-    padding: 30px;
+    padding: 20px;
     color: white;
     border-radius: 10px;
 }
@@ -778,7 +787,7 @@ h1 {
     line-height: 1.7;
 }
 
-.highlight {
+.highlight { 
     background-color: #e8f0fe;
     padding: 2px 5px;
     border-radius: 3px;
@@ -837,7 +846,7 @@ footer {
     }
     
     .disclaimer-item {
-        padding: 15px;
+        padding: 10px;
     }
     
     .disclaimer-title {

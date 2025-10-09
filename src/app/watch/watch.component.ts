@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-watch',
@@ -6,13 +6,9 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./watch.component.css']
 })
 export class WatchComponent {
-  @ViewChild('slider', { static: true }) slider!: ElementRef;
+  
+  constructor() { }
 
-  scrollLeft() {
-    this.slider.nativeElement.scrollBy({ left: -300, behavior: 'smooth' });
-  }
-
-  scrollRight() {
-    this.slider.nativeElement.scrollBy({ left: 300, behavior: 'smooth' });
-  }
+  // You can add functionality here if needed
+  // For example, handling search clicks or other interactions
 }
